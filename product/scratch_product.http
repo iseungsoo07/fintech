@@ -1,0 +1,4 @@
+###
+GET http://localhost:8080/fintech/v1/product/NONE
+Content-Type: application/json
+

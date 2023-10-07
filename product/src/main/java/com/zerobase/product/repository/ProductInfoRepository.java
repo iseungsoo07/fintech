@@ -7,10 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ProductInfoRepository extends JpaRepository<ProductInfo, Long> {
     boolean existsByProductCode(ProductCode productCode);
 
     List<ProductInfo> findAllByOrganizationCode(OrganizationCode organizationCode);
+
+    Optional<ProductInfo> findByProductCode(ProductCode productCode);
 }

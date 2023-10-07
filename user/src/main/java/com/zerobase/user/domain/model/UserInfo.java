@@ -1,5 +1,6 @@
 package com.zerobase.user.domain.model;
 
+import com.zerobase.user.aop.Encrypt;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class UserInfo {
     private String userKey;
 
     @Column(name = "usr_reg_num")
+    @Encrypt
     private String userRegistrationNumber;
 
     @Column(name = "usr_nm")

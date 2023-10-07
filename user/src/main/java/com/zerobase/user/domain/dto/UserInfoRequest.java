@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UserInfoRequest {
     private String userName;
-    private String userIncomeAmount;
+    private Long userIncomeAmount;
     private String userRegistrationNumber;
 }

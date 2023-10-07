@@ -1,20 +1,14 @@
 package com.zerobase.user.service;
 
+import com.zerobase.user.domain.dto.UserInfoGetResponse;
 import com.zerobase.user.domain.dto.UserInfoRequest;
-import com.zerobase.user.domain.model.UserInfo;
-import com.zerobase.user.repository.UserInfoRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import com.zerobase.user.domain.dto.UserInfoSearchResponse;
+import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.List;
+public interface UserInfoService {
 
-@RequiredArgsConstructor
-@Service
-public class UserInfoService {
+    UserInfoGetResponse getUserInfo(@PathVariable UserInfoRequest userInfoRequest);
 
-    private final UserInfoRepository userInfoRepository;
+    UserInfoSearchResponse searchUserInfo(String userKey);
 
-    public UserInfo getUserInfo(UserInfoRequest userInfoRequest) {
-        return userInfoRepository.findByUserRegistrationNumber(userInfoRequest.getUserRegistrationNumber());
-    }
 }

@@ -1,5 +1,6 @@
 package com.zerobase.user.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,9 +8,9 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
-public class Response {
-    private String responseCode;
-    private String responseMessage;
+@NoArgsConstructor
+public class UserInfoSearchResponse extends Response {
+    @JsonProperty
+    private UserFindResponse data;
 }

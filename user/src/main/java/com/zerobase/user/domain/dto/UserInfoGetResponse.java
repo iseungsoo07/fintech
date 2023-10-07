@@ -5,5 +5,6 @@ import lombok.experimental.SuperBuilder;
 
 @Getter
 @SuperBuilder
-public class UserInfoResponse extends Response {
+public class UserInfoGetResponse extends Response {
+    private UserKeyResponse data;
 }

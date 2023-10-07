@@ -1,4 +1,4 @@
-package com.zerobase.product.config;
+package com.zerobase.user.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(getApiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.zerobase.product"))
+                .apis(RequestHandlerSelectors.basePackage("com.zerobase.user"))
                 .build();
     }
 

@@ -8,7 +8,6 @@ import lombok.*;
 @Builder
 @ToString
 public class ProductInfoRequest {
-
     private String organizationCode;
     private String productCode;
     private Double productMaximumInterest;

@@ -26,6 +26,7 @@ public class ProductInformationControllerImpl implements ProductInformationContr
     @GetMapping("/{organizationCode}")
     public ResponseEntity<ProductInfoResponse> searchProductInfo(@ApiParam(value = "기관 코드")
                                                                  @PathVariable OrganizationCode organizationCode) {
+
         ProductInfoResponse productInfoResponse = productInfoService.searchProductInfo(organizationCode);
 
         return ResponseEntity.ok(productInfoResponse);
